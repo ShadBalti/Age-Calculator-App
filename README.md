@@ -5,7 +5,7 @@ Creating an age calculator using JavaScript, HTML, and CSS and uploading it to G
 
 A simple age calculator web application built using JavaScript, HTML, and CSS.
 
-![Demo](demo.png)
+![Demo](Screenshot_20230925-132628.jpg)
 
 ## Table of Contents
 
@@ -28,16 +28,16 @@ The Age Calculator is a web application that allows users to calculate their age
 
 ## Demo
 
-You can see a live demo of the Age Calculator [here](link_to_your_live_demo).
+You can see a live demo of the Age Calculator.
 
-![Demo](demo.png)
+![Demo](Screenshot_20230925-132628.jpg)
 
 ## Usage
 
 1. **Clone the repository**
 
    ```shell
-   git clone https://github.com/your-username/age-calculator.git
+   git clone https://github.com/ShadBalti/age-calculator.git
    ```
 
 2. **Open `index.html`**
@@ -76,5 +76,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Happy coding! If you have any questions or need further assistance, feel free to open an issue or reach out to me.
 ```
-
-Remember to replace placeholders such as `your-username` and `link_to_your_live_demo` with your actual information and URLs. Additionally, you can customize the README further to include any specific instructions or details about your project.
