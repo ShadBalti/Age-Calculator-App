@@ -1,6 +1,6 @@
 Creating an age calculator using JavaScript, HTML, and CSS and uploading it to GitHub is a great project! To help you write a README.md file for your project, here's a template you can use as a starting point:
 
-```markdown
+
 # Age Calculator
 
 A simple age calculator web application built using JavaScript, HTML, and CSS.
@@ -71,8 +71,3 @@ Contributions are welcome! If you'd like to improve this project, please follow 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-**Note:** Replace `your-username` and `link_to_your_live_demo` with your GitHub username and the link to your live demo, respectively.
-
-Happy coding! If you have any questions or need further assistance, feel free to open an issue or reach out to me.
-```
