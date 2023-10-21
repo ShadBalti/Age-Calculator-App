@@ -58,3 +58,26 @@ button:hover {
 #result h2{
   border-bottom: 1px ridge #2B39CC
 }
+
+#milestones {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #milestones h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #milestones p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        #milestones span {
+            font-weight: bold;
+        }
