@@ -42,5 +42,20 @@ function calculateAge() {
   document.getElementById('minutes').textContent = days * 24 * 60
   document.getElementById('seconds').textContent = days * 24 * 60 * 60
   document.getElementById('milliseconds').textContent =
-    (millisecondsInYear * ageInMilliseconds) / millisecondsInYear
+    (millisecondsInYear * ageInMilliseconds) / millisecondsInYear;
+
+  
+            // Calculate life milestones
+            const retirementAge = 65; // Change to the desired retirement age
+            const halfLife = years / 2;
+            const age18 = 18;
+            const age21 = 21;
+            const age30 = 30;
+
+            document.getElementById('retirementAge').textContent = retirementAge;
+            document.getElementById('halfLife').textContent = halfLife.toFixed(2); // Show with two decimal places
+            document.getElementById('age18').textContent = age18;
+            document.getElementById('age21').textContent = age21;
+            document.getElementById('age30').textContent = age30;
+            // Add more milestones as needed
 }
