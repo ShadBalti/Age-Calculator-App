@@ -1,20 +1,22 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: black;
+  color: white;
 }
 
 .container {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px white(0, 0, 0, 0.2);
   text-align: center;
+  border-color: aliceblue;
 }
 
 h1 {
-  color: #333;
+  color: white;
 }
 
 label {
