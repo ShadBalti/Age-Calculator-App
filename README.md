@@ -5,7 +5,7 @@ Creating an age calculator using JavaScript, HTML, and CSS and uploading it to G
 
 A simple age calculator web application built using JavaScript, HTML, and CSS.
 
-![Demo](Screenshot_20230925-132628.jpg)
+![Demo](Screenshot_20231021-191328.jpg)
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ The Age Calculator is a web application that allows users to calculate their age
 
 You can see a live demo of the Age Calculator.
 
-![Demo](Screenshot_20230925-132628.jpg)
+![Demo](Screenshot_20231021-191328.jpg)
 
 ## Usage
 
