@@ -61,24 +61,24 @@ button:hover {
 
 #milestones {
   background-color: #333;
-            border: 1px solid #444;
-            border-radius: 5px;
-            margin-top: 20px;
-            padding: 10px;
-            text-align: left;
-        }
+  border: 1px solid #444;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: left;
+}
 
-        #milestones h2 {
-            font-size: 18px;
-            color: #fff;
-            margin-bottom: 10px;
-        }
- #milestones p {
-            font-size: 16px;
-            color: #fff;
-            margin: 10px 0;
-        }
+#milestones h2 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+#milestones p {
+  font-size: 16px;
+  color: #fff;
+  margin: 10px 0;
+}
 
-        #milestones span {
-            font-weight: bold;
-        }
+#milestones span {
+  font-weight: bold;
+}
