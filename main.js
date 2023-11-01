@@ -1,8 +1,8 @@
 function calculateAge() {
   let userDate = document.getElementById('birthdate').value
 
-  if (userDate == NaN || userDate == '') {
-    return alert('Enter a date of birth')
+  if (userDate == NaN || userDate == '') { 
+    return alert('Enter a valid date of birth. You may have not entered a complete date or entered a non-existent date information.') 
   }
   const birthdate = new Date(userDate)
   const currentDate = new Date()
