@@ -23,6 +23,9 @@ function calculateAge() {
   const millisecondsInMonth = millisecondsInYear / 12
   const millisecondsInWeek = 7 * 24 * 60 * 60 * 1000
   const millisecondsInDay = 24 * 60 * 60 * 1000
+  const millisecondsInHour = 60*60*1000;
+  const millisecondsInMinute = 60*1000;
+  const millisecondsInSecond = 1000;
 
   const years = Math.floor(ageInMilliseconds / millisecondsInYear)
   const remainingMilliseconds = ageInMilliseconds % millisecondsInYear
@@ -32,18 +35,20 @@ function calculateAge() {
   const days = Math.floor(
     (remainingMilliseconds2 % millisecondsInWeek) / millisecondsInDay,
   )
-  // append the result to the result element
+  const ageInHours = ageInMilliseconds/millisecondsInHour;
+  const ageInMinutes = Math.floor(ageInMilliseconds/millisecondsInMinute);
+  const ageInSeconds = Math.floor(ageInMilliseconds/millisecondsInSecond);
 
   document.getElementById('years').textContent = years
   document.getElementById('months').textContent = months
   document.getElementById('weeks').textContent = weeks
   document.getElementById('days').textContent = days
-  document.getElementById('hours').textContent = days * 24
-  document.getElementById('minutes').textContent = days * 24 * 60
-  document.getElementById('seconds').textContent = days * 24 * 60 * 60
-  document.getElementById('milliseconds').textContent =
-    (millisecondsInYear * ageInMilliseconds) / millisecondsInYear;
 
+  //Section Age in
+    document.getElementById('hours').textContent = ageInHours;
+    document.getElementById('minutes').textContent = ageInMinutes;
+    document.getElementById('seconds').textContent = ageInSeconds;
+    document.getElementById('milliseconds').textContent = ageInMilliseconds;
   
             // Calculate life milestones
             const retirementAge = 65; // Change to the desired retirement age
@@ -58,4 +63,6 @@ function calculateAge() {
             document.getElementById('age21').textContent = age21;
             document.getElementById('age30').textContent = age30;
             // Add more milestones as needed
-}
+};
+
+
