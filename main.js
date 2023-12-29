@@ -35,7 +35,7 @@ function calculateAge() {
   const days = Math.floor(
     (remainingMilliseconds2 % millisecondsInWeek) / millisecondsInDay,
   )
-  const ageInHours = ageInMilliseconds/millisecondsInHour;
+  const ageInHours = Math.floor(ageInMilliseconds/millisecondsInHour);
   const ageInMinutes = Math.floor(ageInMilliseconds/millisecondsInMinute);
   const ageInSeconds = Math.floor(ageInMilliseconds/millisecondsInSecond);
 
