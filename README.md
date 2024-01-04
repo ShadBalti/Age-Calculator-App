@@ -1,6 +1,3 @@
-Creating an age calculator using JavaScript, HTML, and CSS and uploading it to GitHub is a great project! To help you write a README.md file for your project, here's a template you can use as a starting point:
-
-
 # Age Calculator
 
 A simple age calculator web application built using JavaScript, HTML, and CSS.
@@ -20,6 +17,7 @@ A simple age calculator web application built using JavaScript, HTML, and CSS.
 ## Introduction
 
 The Age Calculator is a web application that allows users to calculate their age based on their birthdate. It's a beginner-friendly project designed to help you learn the basics of web development using JavaScript, HTML, and CSS.
+if you don't understand main.js code, the code explanation [here](main.js.md)
 
 ## Features
 
