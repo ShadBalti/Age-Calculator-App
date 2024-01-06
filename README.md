@@ -35,7 +35,7 @@ You can see a live demo of the Age Calculator.
 1. **Clone the repository**
 
    ```shell
-   git clone https://github.com/ShadBalti/age-calculator.git
+   git clone https://github.com/ShadBalti/age-calculator-app.git
    ```
 
 2. **Open `index.html`**
@@ -68,4 +68,3 @@ Contributions are welcome! If you'd like to improve this project, please follow 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
