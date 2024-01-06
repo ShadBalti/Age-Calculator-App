@@ -12,31 +12,37 @@
 
 <body>
   <div class="container">
-    <h1>Age Calculator</h1>
-    <label for="birthdate">Enter your birthdate:</label>
-    <input type="date" id="birthdate" required />
-    <button onclick="calculateAge()">Calculate Age</button>
+    <header>
+      <h1>Age Calculator</h1>
+    </header>
+    <form>
+      <label for="birthdate">Enter your birthdate:</label>
+      <input type="date" id="birthdate" required />
+      <button type="button" onclick="calculateAge()">Calculate Age</button>
+    </form>
     <p id="error"></p>
-    <div id="result">
-      <p>Years: <span id="years"></span></p>
-      <p>Months: <span id="months"></span></p>
-      <p>Weeks: <span id="weeks"></span></p>
-      <p>Days: <span id="days"></span></p>
-      <h2>Age In</h2>
-      <p>Milliseconds: <span id="milliseconds"></span></p>
-      <p>Seconds: <span id="seconds"></span></p>
-      <p>Minutes: <span id="minutes"></span></p>
-      <p>Hours: <span id="hours"></span></p>
-    </div>
-    <div id="milestones">
-            <h2>Life Milestones</h2>
-            <p>Retirement Age: <span id="retirementAge"></span></p>
-            <p>Half-Life: <span id="halfLife"></span></p>
-            <p>Age 18: <span id="age18"></span></p>
-            <p>Age 21: <span id="age21"></span></p>
-            <p>Age 30: <span id="age30"></span></p>
-            <!-- Add more milestones as needed -->
-    </div>
+    <main>
+      <section id="result">
+        <p>Years: <span id="years"></span></p>
+        <p>Months: <span id="months"></span></p>
+        <p>Weeks: <span id="weeks"></span></p>
+        <p>Days: <span id="days"></span></p>
+        <h2>Age In</h2>
+        <p>Milliseconds: <span id="milliseconds"></span></p>
+        <p>Seconds: <span id="seconds"></span></p>
+        <p>Minutes: <span id="minutes"></span></p>
+        <p>Hours: <span id="hours"></span></p>
+      </section>
+    </main>
+    <section id="milestones">
+      <h2>Life Milestones</h2>
+      <p>Retirement Age: <span id="retirementAge"></span></p>
+      <p>Half-Life: <span id="halfLife"></span></p>
+      <p>Age 18: <span id="age18"></span></p>
+      <p>Age 21: <span id="age21"></span></p>
+      <p>Age 30: <span id="age30"></span></p>
+      <!-- Add more milestones as needed -->
+    </section>
   </div>
 </body>
 
