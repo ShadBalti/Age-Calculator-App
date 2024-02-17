@@ -82,3 +82,45 @@ button:hover {
 #milestones span {
   font-weight: bold;
 }
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-owner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.owner-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.owner-info {
+  text-align: left;
+}
+
+.social-feed {
+  margin-top: 10px;
+}
+
+.social-feed a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.about-us {
+  margin-top: 20px;
+  text-align: center;
+}
