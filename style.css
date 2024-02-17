@@ -124,3 +124,8 @@ footer p {
   margin-top: 20px;
   text-align: center;
 }
+.owner-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
