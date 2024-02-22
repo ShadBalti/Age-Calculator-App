@@ -5,14 +5,22 @@ body {
 }
 
 .container {
-  max-width: 400px;
+  /* max-width: 600px; */
   margin: 0 auto;
+  width: 700px;
   padding: 20px;
   background-color: #000000;
   border-radius: 10px;
   box-shadow: 0 0 10px white(0, 0, 0, 0.2);
   text-align: center;
   border-color: aliceblue;
+}
+
+#error{
+  background-color: #dc143c;
+  border-radius: 5px;
+  padding : 10px;
+  display: none;
 }
 
 h1 {
@@ -55,18 +63,20 @@ button:hover {
   margin-top: 20px;
 }
 
-#result h2{
-  border-bottom: 1px ridge #2B39CC
+
+#yourAgeContainer, #ageInContainer,#milestonesContainer, #nextBirthday, #owner-section{
+  background-color: #242424;
+  border-radius: 5px;
+  padding : 10px;
+  margin : 10px 0px;
 }
 
-#milestones {
-  background-color: #333;
-  border: 1px solid #444;
-  border-radius: 5px;
-  margin-top: 20px;
-  padding: 10px;
-  text-align: left;
+.ageInHours{
+  float:right
 }
+
+
+
 
 #milestones h2 {
   font-size: 18px;
@@ -108,11 +118,17 @@ footer p {
 }
 
 .owner-info {
+  padding: 30px;
+  height:300px;
   text-align: left;
 }
-
+.info{
+  float: left;
+}
 .social-feed {
   margin-top: 10px;
+  width: 400px;
+  float: right;
 }
 
 .social-feed a {
@@ -129,3 +145,37 @@ footer p {
   height: 100px;
   border-radius: 50%;
 }
+
+#nextBirthdayDays,
+  #nextBirthdayHours,
+  #nextBirthdayMinutes,
+  #nextBirthdaySeconds {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fff;
+    margin: 5px;
+  }
+  .nextBirthdayResults{
+    display: none;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .container {
+    flex: 1;
+  }
+  footer {
+    margin-top: auto;
+  }
+
+  p{
+    font-size: 16px;
+  }
+
+  h2{
+    font-size: 25px;
+  }

@@ -4,7 +4,9 @@ function calculateAge() {
   let userDate = document.getElementById('birthdate').value
 
   if (userDate == NaN || userDate == '') { 
-    return alert('Enter a valid date of birth. You may have not entered a complete date or entered a non-existent date information.') 
+    document.getElementById('error').style.display = 'block'
+    document.getElementById('error').textContent = 'Enter a valid date of birth. You may have not entered a complete date or entered a non-existent date information.'
+    return
   }
   const birthdate = new Date(userDate)
   const currentDate = new Date()
@@ -19,6 +21,7 @@ function calculateAge() {
     return
   }
   // but if the birthdate is less than the current date, calculate the difference and display the result
+  document.getElementById('resultSection').style.display = 'block'
   document.getElementById('result').style.display = 'block'
   const ageInMilliseconds = currentDate - birthdate
   const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25
