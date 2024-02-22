@@ -1,3 +1,5 @@
+var countdownInterval;
+
 function calculateAge() {
   let userDate = document.getElementById('birthdate').value
 
@@ -63,6 +65,28 @@ function calculateAge() {
             document.getElementById('age21').textContent = age21;
             document.getElementById('age30').textContent = age30;
             // Add more milestones as needed
-};
+  if(countdownInterval){
+    clearInterval(countdownInterval)
+  }
+  countdownInterval = setInterval(() => calculateNextBirthday(birthdate), 1000);
+  document.getElementsByClassName('nextBirthdayResults')[0].style.display = 'block';
+}
 
+function calculateNextBirthday(birthdate) {
+  currentDate = new Date();
+  const nextBirthday = new Date(currentDate.getFullYear(), birthdate.getMonth(), birthdate.getDate());
+  if (nextBirthday < currentDate) {
+    nextBirthday.setFullYear(nextBirthday.getFullYear() + 1);
+  }
+  const timeUntilNextBirthday = nextBirthday - currentDate;
 
+  const daysUntilNextBirthday = Math.floor(timeUntilNextBirthday / (1000 * 60 * 60 * 24));
+  const hoursUntilNextBirthday = Math.floor((timeUntilNextBirthday % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutesUntilNextBirthday = Math.floor((timeUntilNextBirthday % (1000 * 60 * 60)) / (1000 * 60));
+  const secondsUntilNextBirthday = Math.floor((timeUntilNextBirthday % (1000 * 60)) / 1000);
+
+  document.getElementById('nextBirthdayDays').textContent = daysUntilNextBirthday;
+  document.getElementById('nextBirthdayHours').textContent = hoursUntilNextBirthday;
+  document.getElementById('nextBirthdayMinutes').textContent = minutesUntilNextBirthday;
+  document.getElementById('nextBirthdaySeconds').textContent = secondsUntilNextBirthday;
+}
