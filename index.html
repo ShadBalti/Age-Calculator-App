@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -8,38 +7,9 @@
   <meta name="author" content="ShadBalti Dilshad Hussain Shad Balti (shadbalti2@gmail.com)">
   <meta name="description" content="Introducing Age Calculator App, a user-friendly app that helps you calculate your age accurately in seconds. Enter your birthdate and instantly see your age in years, months, days, hours, minutes, and even seconds!">
   <meta name="keywords" content="Age Calculator, Age Calculator App, Age Tracker, Birthday Calculator, Date of Birth Calculator, Open Source App, Free App">
-   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-<title> Age Calculator app</title>
-
-<style>
-  #nextBirthdayDays,
-  #nextBirthdayHours,
-  #nextBirthdayMinutes,
-  #nextBirthdaySeconds {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin: 5px;
-  }
-
-  /* Optional: Add additional styling */
-  #nextBirthdayDays::before{
-    content: "Time until next birthday: ";
-    font-weight: normal;
-    color: #666;
-  }
-
-  .nextBirthdayResults{
-    display: none;
-  }
-</style>
-
-  
+  <title>Age Calculator App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <div class="container">
     <header>
@@ -47,73 +17,73 @@
     </header>
     <form>
       <label for="birthdate">Enter your birthdate:</label>
-      <input type="date" id="birthdate" required />
-      <button type="button" onclick="calculateAge()">Calculate Age</button>
+      <input type="date" id="birthdate" required>
+      <button type="button" id="calculateBtn" onclick="calculateAge()">Calculate Age</button>
     </form>
     <p id="error"></p>
-    <main>
+    <main id="resultSection" style="display: none;">
       <section id="result">
-        <p>Years: <span id="years"></span></p>
-        <p>Months: <span id="months"></span></p>
-        <p>Weeks: <span id="weeks"></span></p>
-        <p>Days: <span id="days"></span></p>
-        <h2>Age In</h2>
-        <p>Milliseconds: <span id="milliseconds"></span></p>
-        <p>Seconds: <span id="seconds"></span></p>
-        <p>Minutes: <span id="minutes"></span></p>
-        <p>Hours: <span id="hours"></span></p>
-        <div>
-          <p class="nextBirthdayResults"><span id="nextBirthdayDays"></span> Days
-          <span id="nextBirthdayHours"></span> Hours
-          <span id="nextBirthdayMinutes"></span> Minutes
-          <span id="nextBirthdaySeconds"></span> Seconds</p>
+        <div id="yourAgeContainer" style="float: left;width: 320px;height:200px">
+          <h2>Your Age</h2>
+          <h4>Time from your birth</h4>
+          <p><span id="years"></span> years, <span id="months"></span> months, <span id="weeks"></span> weeks,<span id="days"></span> days
         </div>
+
+        <div id="nextBirthday" class="nextBirthdayResults" style="display: none; float: right;width: 320px;height:200px">
+          <h2>Next Birthday</h2>
+          <h4>Time until next birthday</h4>
+          <p><span id="nextBirthdayDays"></span> Days <span id="nextBirthdayHours"></span> Hours <span id="nextBirthdayMinutes"></span> Minutes <span id="nextBirthdaySeconds"></span> Seconds</p>
+        </div>
+        
       </section>
+      <div style="clear: both;"></div>
+      <section id="milestones" >
+        <div id="milestonesContainer" style="float: left;width: 320px;height:250px">
+          <h2 style="font-size: 25px;">Life Milestones</h2>
+          <p>Retirement Age: <span id="retirementAge"></span></p>
+          <p>Half-Life: <span id="halfLife"></span></p>
+          <p>Age 18: <span id="age18"></span></p>
+          <p>Age 21: <span id="age21"></span></p>
+          <p>Age 30: <span id="age30"></span></p>
+        </div>
+        <div id="ageInContainer" style=" float: right;width: 320px;height:250px">
+          <h2 style="font-size: 25px;">Age In</h2>
+          <p>Hours: <span id="hours"></span></p>
+          <p>Minutes: <span id="minutes"></span></p>
+          <p>Seconds: <span id="seconds"></span></p>
+          <p>Milliseconds: <span id="milliseconds"></span></p>
+          </div>
+      </section>
+      <div style="clear: both;"></div>
+      
     </main>
-    <section id="milestones">
-      <h2>Life Milestones</h2>
-      <p>Retirement Age: <span id="retirementAge"></span></p>
-      <p>Half-Life: <span id="halfLife"></span></p>
-      <p>Age 18: <span id="age18"></span></p>
-      <p>Age 21: <span id="age21"></span></p>
-      <p>Age 30: <span id="age30"></span></p>
-      <!-- Add more milestones as needed -->
-    </section>
-    
   </div>
-      <footer id="owner-section" class="py-4">
-        <div class="container mx-auto">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Shadbalti.jpg" alt="Owner's Image" class="owner-image">
-                </div>
-                <div class="col-md-6">
-                    <h4>Dilshad Hussain</h4>
-                    <p>Contact Information:</p>
-                    <p><i class="bi bi-telephone"></i> Phone: 03408452974</p>
-                    <p><i class="bi bi-envelope"></i> Email: shadbalti2@gmail.com</p>
-                    <p>Physical Address: Barah Khaplu, Skardu, Pakistan</p>
-                    <p id="clock"></p> <!-- Dynamic clock -->
-                    <div class="social-feed mt-3">
-                        <!-- Social media feed (use appropriate embed code or widget) -->
-                        <!-- Example Twitter embed code -->
-                        <a class="twitter-timeline" data-height="200" href="https://twitter.com/ShadBalti" data-tweet-limit="3">Tweets by ShadBalti</a>
-                    </div>
-                </div>
-            </div>
+  <footer id="owner-section">
+    <!-- <div class="container"> -->
+      <div class="owner-info">
+        <div class="info">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Shadbalti.jpg" alt="Owner's Image" class="owner-image">
+          <h4>Dilshad Hussain</h4>
+          <p>Contact Information:</p>
+          <p><i class="bi bi-telephone"></i> Phone: 03408452974</p>
+          <p><i class="bi bi-envelope"></i> Email: shadbalti2@gmail.com</p>
+          <p>Physical Address: Barah Khaplu, Skardu, Pakistan</p>
+          <p id="clock"></p> <!-- Dynamic clock -->
         </div>
-        <div class="container">
-            <div class="row mt-4">
-                <div class="col-md-6">
-                    <h5>About Us</h5>
-                    <p>I'm Dilshad Hussain, a web developer. I love coding and creating websites that work beautifully. </p>
-                </div>
-
-            </div>
+        <div class="social-feed mt-3">
+          <!-- Social media feed (use appropriate embed code or widget) -->
+          <!-- Example Twitter embed code -->
+          <a class="twitter-timeline" data-height="300" href="https://twitter.com/ShadBalti" data-tweet-limit="3"></a>
         </div>
-    </footer>
-    <script src="main.js"></script>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"> </script>
+      </div>
+      <div class="about-us">
+        <h5>About Us</h5>
+        <p>I'm Dilshad Hussain, a web developer. I love coding and creating websites that work beautifully.</p>
+      </div>
+     
+    <!-- </div> -->
+  </footer>
+  <script src="main.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
-
 </html>
