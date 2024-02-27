@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age-Calculator-App - GitHub Commits</title>
+  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+   /* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1400px; /* Increase max-width for larger screens */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Commit card styles */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increase box-shadow */
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.commit-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.commit-info img {
+  width: 60px; /* Increase image size */
+  height: 60px; /* Increase image size */
+  border-radius: 50%;
+  margin-right: 20px; /* Increase margin */
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.commit-info span {
+  font-weight: bold;
+}
+
+.commit-message {
+  font-size: 20px; /* Increase font size */
+  margin-bottom: 10px;
+}
+
+.commit-stats {
+  font-size: 18px; /* Increase font size */
+  color: #666;
+}
+
+.user-section {
+  margin-bottom: 30px;
+}
+
+.user-name {
+  font-size: 28px; /* Increase font size */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+<style/>
+
+</head>
+<body>
+  <div class="container">
+    <div id="commits" class="row"></div>
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const apiUrl = 'https://api.github.com/repos/ShadBalti/Age-Calculator-App/commits?since=2023-09-24&until=2024-01-06';
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const commitsContainer = document.getElementById('commits');
+      const users = {};
+
+      data.forEach(commit => {
+        const userName = commit.author ? commit.author.login : 'Unknown';
+        if (!users[userName]) {
+          users[userName] = [];
+        }
+        users[userName].push(commit);
+      });
+
+      for (const userName in users) {
+        const userSection = createUserSection(userName, users[userName]);
+        commitsContainer.appendChild(userSection);
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+});
+
+function createUserSection(userName, commits) {
+  const userSection = document.createElement('div');
+  userSection.classList.add('user-section');
+
+  const userNameHeader = document.createElement('h3');
+  userNameHeader.classList.add('user-name');
+  userNameHeader.textContent = userName;
+
+  userSection.appendChild(userNameHeader);
+
+  commits.forEach(commit => {
+    const commitCard = createCommitCard(commit);
+    userSection.appendChild(commitCard);
+  });
+
+  return userSection;
+}
+
+function createCommitCard(commit) {
+  const card = document.createElement('div');
+  card.classList.add('card');
+
+  const cardBody = document.createElement('div');
+  cardBody.classList.add('card-body');
+
+  const commitInfo = document.createElement('div');
+  commitInfo.classList.add('commit-info');
+
+  const authorImage = document.createElement('img');
+  authorImage.src = commit.author ? commit.author.avatar_url : ''; // Check if author object exists
+  authorImage.alt = 'Author Avatar';
+
+  const authorName = document.createElement('span');
+  authorName.textContent = commit.commit.author ? commit.commit.author.name : ''; // Check if commit author object exists
+
+  commitInfo.appendChild(authorImage);
+  commitInfo.appendChild(authorName);
+
+  const message = document.createElement('p');
+  message.classList.add('commit-message');
+  message.textContent = commit.commit ? commit.commit.message : ''; // Check if commit message exists
+
+  const stats = document.createElement('p');
+  stats.classList.add('commit-stats');
+  const additions = commit.stats ? commit.stats.additions : 0; // Check if stats object exists
+  const deletions = commit.stats ? commit.stats.deletions : 0; // Check if stats object exists
+  stats.textContent = `+${additions} -${deletions}`;
+
+  cardBody.appendChild(commitInfo);
+  cardBody.appendChild(message);
+  cardBody.appendChild(stats);
+
+  card.appendChild(cardBody);
+
+  return card;
+}
+
+ </script>
+</body>
+</html>
