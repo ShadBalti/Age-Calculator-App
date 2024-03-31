@@ -16,10 +16,10 @@ body {
   border-color: aliceblue;
 }
 
-#error{
+#error {
   background-color: #dc143c;
   border-radius: 5px;
-  padding : 10px;
+  padding: 10px;
   display: none;
 }
 
@@ -40,7 +40,8 @@ input {
   border: none;
   border-radius: 3px;
 }
-input:focus{
+
+input:focus {
   outline: none
 }
 
@@ -51,28 +52,33 @@ button {
   padding: 10px 20px;
   border-radius: 3px;
   cursor: pointer;
+  margin-top: 5px;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-#result p span{
+#result p span {
   font-size: 23px;
   font-weight: bold;
   margin-top: 20px;
 }
 
 
-#yourAgeContainer, #ageInContainer,#milestonesContainer, #nextBirthday, #owner-section{
+#yourAgeContainer,
+#ageInContainer,
+#milestonesContainer,
+#nextBirthday,
+#owner-section {
   background-color: #242424;
   border-radius: 5px;
-  padding : 10px;
-  margin : 10px 0px;
+  padding: 10px;
+  margin: 10px 0px;
 }
 
-.ageInHours{
-  float:right
+.ageInHours {
+  float: right
 }
 
 
@@ -83,6 +89,7 @@ button:hover {
   color: #fff;
   margin-bottom: 10px;
 }
+
 #milestones p {
   font-size: 16px;
   color: #fff;
@@ -119,12 +126,14 @@ footer p {
 
 .owner-info {
   padding: 30px;
-  height:300px;
+  height: 300px;
   text-align: left;
 }
-.info{
+
+.info {
   float: left;
 }
+
 .social-feed {
   margin-top: 10px;
   width: 400px;
@@ -140,6 +149,7 @@ footer p {
   margin-top: 20px;
   text-align: center;
 }
+
 .owner-image {
   width: 100px;
   height: 100px;
@@ -147,35 +157,38 @@ footer p {
 }
 
 #nextBirthdayDays,
-  #nextBirthdayHours,
-  #nextBirthdayMinutes,
-  #nextBirthdaySeconds {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bolder;
-    color: #fff;
-    margin: 5px;
-  }
-  .nextBirthdayResults{
-    display: none;
-  }
+#nextBirthdayHours,
+#nextBirthdayMinutes,
+#nextBirthdaySeconds {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #fff;
+  margin: 5px;
+}
 
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  .container {
-    flex: 1;
-  }
-  footer {
-    margin-top: auto;
-  }
+.nextBirthdayResults {
+  display: none;
+}
 
-  p{
-    font-size: 16px;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-  h2{
-    font-size: 25px;
-  }
+.container {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+p {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 25px;
+}

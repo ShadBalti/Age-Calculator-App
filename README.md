@@ -2,7 +2,9 @@
 
 A simple age calculator web application built using JavaScript, HTML, and CSS.
 
-![Demo](Screenshot_20240107-134510.png)
+<div align="center">
+  <img src="Screenshot.png" alt="Demo" width="70%" height="70%">
+</div>
 
 ## Table of Contents
 
@@ -28,7 +30,9 @@ if you don't understand main.js code, the code explanation [here](main.js.md)
 
 You can see a live demo of the Age Calculator.
 
-![Demo](Screenshot_20240107-134510.png)
+<div align="center">
+  <img src="Screenshot.png" alt="Demo" width="70%" height="70%">
+</div>
 
 ## Usage
 
