@@ -57,6 +57,12 @@
       <div style="clear: both;"></div>
       
     </main>
+    <div class="container">
+    <h1 class="mt-5 mb-4">Project Contributors</h1>
+    <div id="contributors" class="row">
+      <!-- Contributors will be dynamically added here -->
+    </div>
+  </div>
     <div>
          <button class="btn btn-primary"><a href="commits.html" style="text-decoration: none; color: inherit;">View Commits</a></button>
       </div>
@@ -87,6 +93,30 @@
     <!-- </div> -->
   </footer>
   <script src="main.js"></script>
+  <script>
+    // Fetch contributors from GitHub API
+    fetch('https://api.github.com/repos/<your_username>/<your_repository>/contributors')
+      .then(response => response.json())
+      .then(data => {
+        const contributorsContainer = document.getElementById('contributors');
+        data.forEach(contributor => {
+          const contributorCard = `
+            <div class="col-md-4 contributor-card">
+              <div class="card">
+                <img src="${contributor.avatar_url}" class="card-img-top" alt="Profile Picture">
+                <div class="card-body">
+                  <h5 class="card-title">${contributor.login}</h5>
+                  <p class="card-text">Contributions: ${contributor.contributions}</p>
+                  <a href="${contributor.html_url}" class="btn btn-primary">View Profile</a>
+                </div>
+              </div>
+            </div>
+          `;
+          contributorsContainer.innerHTML += contributorCard;
+        });
+      })
+      .catch(error => console.error('Error fetching contributors:', error));
+  </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
