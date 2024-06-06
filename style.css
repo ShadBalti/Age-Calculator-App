@@ -179,3 +179,12 @@ footer p {
   h2{
     font-size: 25px;
   }
+
+
+.contributor-card {
+      margin-bottom: 20px;
+    }
+    .contributor-card img {
+      max-width: 100px;
+      border-radius: 50%;
+    }
