@@ -181,10 +181,15 @@ footer p {
   }
 
 
-.contributor-card {
-      margin-bottom: 20px;
+.contributors-container {
+      display: flex;
+      flex-wrap: wrap;
     }
-    .contributor-card img {
+.contributor-card {
+      width: 33.33%;
+      padding: 10px;
+    }
+.contributor-card img {
       max-width: 100px;
       border-radius: 50%;
-    }
+}
