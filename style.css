@@ -183,6 +183,7 @@ footer p {
 
 .contributor-card {
       margin-bottom: 20px;
+      width: 33.33%;
     }
     .contributor-card img {
       max-width: 100px;
