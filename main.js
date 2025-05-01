@@ -3,7 +3,7 @@ var countdownInterval;
 function calculateAge() {
   let userDate = document.getElementById('birthdate').value
 
-  if (userDate == NaN || userDate == '') { 
+  if (userDate == NaN || userDate == '') {
     document.getElementById('error').style.display = 'block'
     document.getElementById('error').textContent = 'Enter a valid date of birth. You may have not entered a complete date or entered a non-existent date information.'
     return
@@ -28,8 +28,8 @@ function calculateAge() {
   const millisecondsInMonth = millisecondsInYear / 12
   const millisecondsInWeek = 7 * 24 * 60 * 60 * 1000
   const millisecondsInDay = 24 * 60 * 60 * 1000
-  const millisecondsInHour = 60*60*1000;
-  const millisecondsInMinute = 60*1000;
+  const millisecondsInHour = 60 * 60 * 1000;
+  const millisecondsInMinute = 60 * 1000;
   const millisecondsInSecond = 1000;
 
   const years = Math.floor(ageInMilliseconds / millisecondsInYear)
@@ -40,9 +40,10 @@ function calculateAge() {
   const days = Math.floor(
     (remainingMilliseconds2 % millisecondsInWeek) / millisecondsInDay,
   )
-  const ageInHours = Math.floor(ageInMilliseconds/millisecondsInHour);
-  const ageInMinutes = Math.floor(ageInMilliseconds/millisecondsInMinute);
-  const ageInSeconds = Math.floor(ageInMilliseconds/millisecondsInSecond);
+  const ageInDays = Math.floor(ageInMilliseconds / millisecondsInDay);
+  const ageInHours = Math.floor(ageInMilliseconds / millisecondsInHour);
+  const ageInMinutes = Math.floor(ageInMilliseconds / millisecondsInMinute);
+  const ageInSeconds = Math.floor(ageInMilliseconds / millisecondsInSecond);
 
   document.getElementById('years').textContent = years
   document.getElementById('months').textContent = months
@@ -50,25 +51,26 @@ function calculateAge() {
   document.getElementById('days').textContent = days
 
   //Section Age in
-    document.getElementById('hours').textContent = ageInHours;
-    document.getElementById('minutes').textContent = ageInMinutes;
-    document.getElementById('seconds').textContent = ageInSeconds;
-    document.getElementById('milliseconds').textContent = ageInMilliseconds;
-  
-            // Calculate life milestones
-            const retirementAge = 65; // Change to the desired retirement age
-            const halfLife = years / 2;
-            const age18 = 18;
-            const age21 = 21;
-            const age30 = 30;
+  document.getElementById('ageInDays').textContent = ageInDays;
+  document.getElementById('hours').textContent = ageInHours;
+  document.getElementById('minutes').textContent = ageInMinutes;
+  document.getElementById('seconds').textContent = ageInSeconds;
+  document.getElementById('milliseconds').textContent = ageInMilliseconds;
 
-            document.getElementById('retirementAge').textContent = retirementAge;
-            document.getElementById('halfLife').textContent = halfLife.toFixed(2); // Show with two decimal places
-            document.getElementById('age18').textContent = age18;
-            document.getElementById('age21').textContent = age21;
-            document.getElementById('age30').textContent = age30;
-            // Add more milestones as needed
-  if(countdownInterval){
+  // Calculate life milestones
+  const retirementAge = 65; // Change to the desired retirement age
+  const halfLife = years / 2;
+  const age18 = 18;
+  const age21 = 21;
+  const age30 = 30;
+
+  document.getElementById('retirementAge').textContent = retirementAge;
+  document.getElementById('halfLife').textContent = halfLife.toFixed(2); // Show with two decimal places
+  document.getElementById('age18').textContent = age18;
+  document.getElementById('age21').textContent = age21;
+  document.getElementById('age30').textContent = age30;
+  // Add more milestones as needed
+  if (countdownInterval) {
     clearInterval(countdownInterval)
   }
   countdownInterval = setInterval(() => calculateNextBirthday(birthdate), 1000);

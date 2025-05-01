@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="ShadBalti Dilshad Hussain Shad Balti (shadbalti2@gmail.com)">
-  <meta name="description" content="Introducing Age Calculator App, a user-friendly app that helps you calculate your age accurately in seconds. Enter your birthdate and instantly see your age in years, months, days, hours, minutes, and even seconds!">
-  <meta name="keywords" content="Age Calculator, Age Calculator App, Age Tracker, Birthday Calculator, Date of Birth Calculator, Open Source App, Free App">
+  <meta name="description"
+    content="Introducing Age Calculator App, a user-friendly app that helps you calculate your age accurately in seconds. Enter your birthdate and instantly see your age in years, months, days, hours, minutes, and even seconds!">
+  <meta name="keywords"
+    content="Age Calculator, Age Calculator App, Age Tracker, Birthday Calculator, Date of Birth Calculator, Open Source App, Free App">
   <title>Age Calculator App</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -26,18 +30,21 @@
         <div id="yourAgeContainer" style="float: left;width: 320px;height:200px">
           <h2>Your Age</h2>
           <h4>Time from your birth</h4>
-          <p><span id="years"></span> years, <span id="months"></span> months, <span id="weeks"></span> weeks,<span id="days"></span> days
+          <p><span id="years"></span> years, <span id="months"></span> months, <span id="weeks"></span> weeks,<span
+              id="days"></span> days
         </div>
 
-        <div id="nextBirthday" class="nextBirthdayResults" style="display: none; float: right;width: 320px;height:200px">
+        <div id="nextBirthday" class="nextBirthdayResults"
+          style="display: none; float: right;width: 320px;height:200px">
           <h2>Next Birthday</h2>
           <h4>Time until next birthday</h4>
-          <p><span id="nextBirthdayDays"></span> Days <span id="nextBirthdayHours"></span> Hours <span id="nextBirthdayMinutes"></span> Minutes <span id="nextBirthdaySeconds"></span> Seconds</p>
+          <p><span id="nextBirthdayDays"></span> Days <span id="nextBirthdayHours"></span> Hours <span
+              id="nextBirthdayMinutes"></span> Minutes <span id="nextBirthdaySeconds"></span> Seconds</p>
         </div>
-        
+
       </section>
       <div style="clear: both;"></div>
-      <section id="milestones" >
+      <section id="milestones">
         <div id="milestonesContainer" style="float: left;width: 320px;height:250px">
           <h2 style="font-size: 25px;">Life Milestones</h2>
           <p>Retirement Age: <span id="retirementAge"></span></p>
@@ -48,48 +55,51 @@
         </div>
         <div id="ageInContainer" style=" float: right;width: 320px;height:250px">
           <h2 style="font-size: 25px;">Age In</h2>
+          <p>Days: <span id="ageInDays"></span></p>
           <p>Hours: <span id="hours"></span></p>
           <p>Minutes: <span id="minutes"></span></p>
           <p>Seconds: <span id="seconds"></span></p>
           <p>Milliseconds: <span id="milliseconds"></span></p>
-          </div>
+        </div>
       </section>
       <div style="clear: both;"></div>
-      
+
     </main>
     <div class="container">
-    <h1 class="mt-5 mb-4">Project Contributors</h1>
-    <div id="contributors" class="row">
-      <!-- Contributors will be dynamically added here -->
-    </div>
-  </div>
-    <div>
-         <button class="btn btn-primary"><a href="commits.html" style="text-decoration: none; color: inherit;">View Commits</a></button>
+      <h1 class="mt-5 mb-4">Project Contributors</h1>
+      <div id="contributors" class="contributors-container">
+        <!-- Contributors will be dynamically added here -->
       </div>
+    </div>
+    <div>
+      <button class="btn btn-primary"><a href="commits.html" style="text-decoration: none; color: inherit;">View
+          Commits</a></button>
+    </div>
   </div>
   <footer id="owner-section">
     <!-- <div class="container"> -->
-      <div class="owner-info">
-        <div class="info">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Shadbalti.jpg" alt="Owner's Image" class="owner-image">
-          <h4>Dilshad Hussain</h4>
-          <p>Contact Information:</p>
-          <p><i class="bi bi-telephone"></i> Phone: 03408452974</p>
-          <p><i class="bi bi-envelope"></i> Email: shadbalti2@gmail.com</p>
-          <p>Physical Address: Barah Khaplu, Skardu, Pakistan</p>
-          <p id="clock"></p> <!-- Dynamic clock -->
-        </div>
-        <div class="social-feed mt-3">
-          <!-- Social media feed (use appropriate embed code or widget) -->
-          <!-- Example Twitter embed code -->
-          <a class="twitter-timeline" data-height="300" href="https://twitter.com/ShadBalti" data-tweet-limit="3"></a>
-        </div>
+    <div class="owner-info">
+      <div class="info">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Shadbalti.jpg" alt="Owner's Image"
+          class="owner-image">
+        <h4>Dilshad Hussain</h4>
+        <p>Contact Information:</p>
+        <p><i class="bi bi-telephone"></i> Phone: 03408452974</p>
+        <p><i class="bi bi-envelope"></i> Email: shadbalti2@gmail.com</p>
+        <p>Physical Address: Barah Khaplu, Skardu, Pakistan</p>
+        <p id="clock"></p> <!-- Dynamic clock -->
       </div>
-      <div class="about-us">
-        <h5>About Us</h5>
-        <p>I'm Dilshad Hussain, a web developer. I love coding and creating websites that work beautifully.</p>
+      <div class="social-feed mt-3">
+        <!-- Social media feed (use appropriate embed code or widget) -->
+        <!-- Example Twitter embed code -->
+        <a class="twitter-timeline" data-height="300" href="https://twitter.com/ShadBalti" data-tweet-limit="3"></a>
       </div>
-     
+    </div>
+    <div class="about-us">
+      <h5>About Us</h5>
+      <p>I'm Dilshad Hussain, a web developer. I love coding and creating websites that work beautifully.</p>
+    </div>
+
     <!-- </div> -->
   </footer>
   <script src="main.js"></script>
@@ -101,14 +111,12 @@
         const contributorsContainer = document.getElementById('contributors');
         data.forEach(contributor => {
           const contributorCard = `
-            <div class="col-md-4 contributor-card">
-              <div class="card">
-                <img src="${contributor.avatar_url}" class="card-img-top" alt="Profile Picture">
-                <div class="card-body">
-                  <h5 class="card-title">${contributor.login}</h5>
-                  <p class="card-text">Contributions: ${contributor.contributions}</p>
-                  <a href="${contributor.html_url}" class="btn btn-primary">View Profile</a>
-                </div>
+            <div class="card contributor-card">
+              <img src="${contributor.avatar_url}" class="card-img-top" alt="Profile Picture">
+              <div class="card-body">
+                <h5 class="card-title">${contributor.login}</h5>
+                <p class="card-text">Contributions: ${contributor.contributions}</p>
+                <a href="${contributor.html_url}" class="btn btn-primary">View Profile</a>
               </div>
             </div>
           `;
@@ -119,4 +127,5 @@
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
+
 </html>
